@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muzhar Maulana — Profil Semantik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JSON-LD SEMANTIC WEB MARKUP — Tahap 2
+       Skema: Person, CollegeOrUniversity, SoftwareApplication, DefinedTerm (x3)
+       Standar: schema.org | Valid untuk Google Rich Results
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- SKEMA 1 (WAJIB): Person — Identitas utama Muzhar Maulana -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://muzharmaulana.github.io/#person",
+    "name": "Muzhar Maulana",
+    "givenName": "Muzhar",
+    "familyName": "Maulana",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "NIM",
+      "value": "F1G123031"
+    },
+    "description": "Mahasiswa S1 Ilmu Komputer Universitas Halu Oleo yang memiliki kompetensi di bidang Web Development, Python, dan UI/UX Design.",
+    "url": "https://muzharmaulana.github.io/",
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "SDN 18 Mandongga",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kendari",
+          "addressRegion": "Sulawesi Tenggara",
+          "addressCountry": "ID"
+        }
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "SMPN 13 Kendari",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kendari",
+          "addressRegion": "Sulawesi Tenggara",
+          "addressCountry": "ID"
+        }
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "SMAN 6 Kendari",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kendari",
+          "addressRegion": "Sulawesi Tenggara",
+          "addressCountry": "ID"
+        }
+      }
+    ],
+    "affiliation": [
+      {
+        "@type": "CollegeOrUniversity",
+        "@id": "https://muzharmaulana.github.io/#uho",
+        "name": "Universitas Halu Oleo",
+        "sameAs": "https://www.uho.ac.id"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://muzharmaulana.github.io/#hmps",
+        "name": "HMPS Ilmu Komputer",
+        "description": "Himpunan Mahasiswa Program Studi Ilmu Komputer Universitas Halu Oleo",
+        "memberOf": {
+          "@type": "CollegeOrUniversity",
+          "@id": "https://muzharmaulana.github.io/#uho"
+        }
+      }
+    ],
+    "knowsAbout": [
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://muzharmaulana.github.io/#skill-webdev",
+        "name": "Web Development",
+        "termCode": "SKILL-001",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "Kompetensi Teknis Muzhar Maulana"
+        }
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://muzharmaulana.github.io/#skill-python",
+        "name": "Python",
+        "termCode": "SKILL-002",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "Kompetensi Teknis Muzhar Maulana"
+        }
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://muzharmaulana.github.io/#skill-uiux",
+        "name": "UI/UX Design",
+        "termCode": "SKILL-003",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "Kompetensi Teknis Muzhar Maulana"
+        }
+      }
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "@id": "https://muzharmaulana.github.io/#hmps"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://muzharmaulana.github.io/"
+    }
+  }
+  </script>
+
+  <!-- SKEMA 2 (WAJIB): CollegeOrUniversity — Entitas Universitas Halu Oleo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "@id": "https://muzharmaulana.github.io/#uho",
+    "name": "Universitas Halu Oleo",
+    "alternateName": "UHO",
+    "url": "https://www.uho.ac.id",
+    "sameAs": "https://www.uho.ac.id",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. H.E.A. Mokodompit",
+      "addressLocality": "Kendari",
+      "addressRegion": "Sulawesi Tenggara",
+      "postalCode": "93232",
+      "addressCountry": "ID"
+    },
+    "department": {
+      "@type": "Organization",
+      "name": "Program Studi Ilmu Komputer",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)"
+      }
+    },
+    "description": "Universitas Halu Oleo adalah perguruan tinggi negeri yang terletak di Kendari, Sulawesi Tenggara, Indonesia.",
+    "student": {
+      "@type": "Person",
+      "@id": "https://muzharmaulana.github.io/#person",
+      "name": "Muzhar Maulana"
+    }
+  }
+  </script>
+
+  <!-- SKEMA 3 (OPSIONAL): Project — Proyek Sistem Informasi Herbal -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Project",
+    "@id": "https://muzharmaulana.github.io/#project-herbal",
+    "name": "Sistem Informasi Herbal & Tanaman Obat Indonesia",
+    "description": "Platform digital berbasis web yang mengintegrasikan data ensiklopedis mengenai tanaman herbal dan obat-obatan tradisional Indonesia untuk memudahkan akses masyarakat terhadap informasi ilmiah.",
+    "member": {
+      "@type": "Person",
+      "@id": "https://muzharmaulana.github.io/#person",
+      "name": "Muzhar Maulana"
+    },
+    "keywords": ["herbal", "tanaman obat", "Indonesia", "sistem informasi", "web application"]
+  }
+  </script>
+
+  <!-- SKEMA 4 (OPSIONAL): DefinedTermSet — Kumpulan Skill sebagai Entitas Terstruktur -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "@id": "https://muzharmaulana.github.io/#skillset",
+    "name": "Kompetensi Teknis Muzhar Maulana",
+    "description": "Himpunan keahlian teknis yang dimiliki Muzhar Maulana dalam bidang pengembangan perangkat lunak dan desain.",
+    "hasDefinedTerm": [
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://muzharmaulana.github.io/#skill-webdev",
+        "name": "Web Development",
+        "termCode": "SKILL-001",
+        "description": "Kemampuan membangun antarmuka web responsif menggunakan HTML, CSS, JavaScript, dan framework modern.",
+        "sameAs": "https://en.wikipedia.org/wiki/Web_development"
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://muzharmaulana.github.io/#skill-python",
+        "name": "Python",
+        "termCode": "SKILL-002",
+        "description": "Pemrograman Python untuk data processing, scripting otomasi, dan pengembangan backend.",
+        "sameAs": "https://en.wikipedia.org/wiki/Python_(programming_language)"
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://muzharmaulana.github.io/#skill-uiux",
+        "name": "UI/UX Design",
+        "termCode": "SKILL-003",
+        "description": "Perancangan pengalaman pengguna (UX) dan antarmuka visual (UI) yang intuitif dan estetis.",
+        "sameAs": "https://en.wikipedia.org/wiki/User_experience_design"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-logo">MM</div>
+    <div class="topbar-nim">F1G123031 · UHO</div>
+  </header>
+
+  <!-- SIDE NAV DOTS -->
+  <nav class="side-nav" aria-label="Navigasi halaman">
+    <a href="#hero" data-section="hero"> <span class="dot-label">Beranda</span><span class="dot"></span></a>
+    <a href="#identitas" data-section="identitas"> <span class="dot-label">Identitas</span><span class="dot"></span></a>
+    <a href="#pendidikan" data-section="pendidikan"> <span class="dot-label">Pendidikan</span><span
+        class="dot"></span></a>
+    <a href="#skill" data-section="skill"> <span class="dot-label">Skill</span><span class="dot"></span></a>
+    <a href="#organisasi" data-section="organisasi"> <span class="dot-label">Organisasi</span><span
+        class="dot"></span></a>
+    <a href="#proyek" data-section="proyek"> <span class="dot-label">Proyek</span><span class="dot"></span></a>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="mob-nav" aria-label="Navigasi mobile">
+    <a href="#hero">Beranda</a>
+    <a href="#identitas">Identitas</a>
+    <a href="#pendidikan">Pendidikan</a>
+    <a href="#skill">Skill</a>
+    <a href="#organisasi">Org</a>
+    <a href="#proyek">Proyek</a>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section id="hero">
+    <div class="hero-mono" aria-hidden="true">M</div>
+    <div class="hero-inner container">
+      <div class="hero-badge">Profil Semantik Web · 2025</div>
+      <h1 class="hero-name">
+        <span class="underline-teal">Muzhar</span><br>Maulana
+      </h1>
+      <p class="hero-tagline">
+        Mahasiswa Ilmu Komputer Universitas Halu Oleo yang memiliki minat di bidang
+        Web Development, Python, dan UI/UX — membangun solusi digital berbasis data.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">NIM</span>
+          <span class="hero-meta-value">F1G123031</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Program Studi</span>
+          <span class="hero-meta-value">Ilmu Komputer</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Universitas</span>
+          <span class="hero-meta-value">Halu Oleo</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Kota</span>
+          <span class="hero-meta-value">Kendari, Sulawesi Tenggara</span>
+        </div>
+      </div>
+      <a href="#identitas" class="hero-cta">
+        Lihat Profil
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ IDENTITAS ═══════════ -->
+  <section id="identitas">
+    <div class="container">
+      <p class="section-eyebrow reveal">01 — Identitas</p>
+      <h2 class="section-title reveal reveal-d1">Data Pribadi</h2>
+      <div class="section-divider reveal reveal-d2"></div>
+      <div class="id-grid">
+        <div class="id-card reveal reveal-d1">
+          <div class="id-card-label">Nama Lengkap</div>
+          <div class="id-card-value">Muzhar Maulana</div>
+        </div>
+        <div class="id-card reveal reveal-d2">
+          <div class="id-card-label">Nomor Induk Mahasiswa</div>
+          <div class="id-card-value">F1G123031</div>
+        </div>
+        <div class="id-card reveal reveal-d3">
+          <div class="id-card-label">Program Studi</div>
+          <div class="id-card-value">Ilmu Komputer</div>
+        </div>
+        <div class="id-card reveal reveal-d4">
+          <div class="id-card-label">Fakultas</div>
+          <div class="id-card-value">MIPA</div>
+        </div>
+        <div class="id-card span-2 reveal reveal-d5">
+          <div class="id-card-label">Universitas</div>
+          <div class="id-card-value">Universitas Halu Oleo — Kendari, Sulawesi Tenggara</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PENDIDIKAN ═══════════ -->
+  <section id="pendidikan">
+    <div class="container">
+      <p class="section-eyebrow reveal">02 — Riwayat Pendidikan</p>
+      <h2 class="section-title reveal reveal-d1">Perjalanan Akademik</h2>
+      <div class="section-divider reveal reveal-d2"></div>
+      <div class="timeline reveal reveal-d3">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-order">Pendidikan Dasar</div>
+          <div class="timeline-school">SDN 18 Mandongga</div>
+          <div class="timeline-desc">Sekolah Dasar Negeri 18 Mandongga, Kendari.<br>Jenjang awal yang membangun pondasi
+            belajar.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-order">Pendidikan Menengah Pertama</div>
+          <div class="timeline-school">SMPN 13 Kendari</div>
+          <div class="timeline-desc">Sekolah Menengah Pertama Negeri 13 Kendari.<br>Tahap pengembangan minat dan pola
+            pikir kritis.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-order">Pendidikan Menengah Atas</div>
+          <div class="timeline-school">SMAN 6 Kendari</div>
+          <div class="timeline-desc">Sekolah Menengah Atas Negeri 6 Kendari.<br>Peminatan IPA yang mengarahkan pada ilmu
+            komputer dan sains.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-order">Pendidikan Tinggi — Sedang Berjalan</div>
+          <div class="timeline-school">Universitas Halu Oleo</div>
+          <div class="timeline-desc">S1 Ilmu Komputer, FMIPA · Kendari.<br>Fokus studi pada Rekayasa Perangkat Lunak dan
+            Semantic Web.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILL ═══════════ -->
+  <section id="skill">
+    <div class="container">
+      <p class="section-eyebrow reveal">03 — Kompetensi</p>
+      <h2 class="section-title reveal reveal-d1">Keahlian Teknis</h2>
+      <div class="section-divider reveal reveal-d2"></div>
+      <div class="skill-grid">
+
+        <div class="skill-card reveal reveal-d1">
+          <div class="skill-icon">🌐</div>
+          <div>
+            <div class="skill-name">Web Development</div>
+            <div class="skill-desc">Membangun antarmuka web yang responsif dan fungsional menggunakan HTML, CSS,
+              JavaScript, serta framework modern.</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Proficiency</span><span>85%</span></div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-d2">
+          <div class="skill-icon">🐍</div>
+          <div>
+            <div class="skill-name">Python</div>
+            <div class="skill-desc">Pemrograman Python untuk data processing, scripting otomasi, dan pengembangan
+              backend aplikasi berbasis logika.</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="78"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-d3">
+          <div class="skill-icon">🎨</div>
+          <div>
+            <div class="skill-name">UI/UX Design</div>
+            <div class="skill-desc">Merancang pengalaman pengguna yang intuitif dan antarmuka visual yang estetis,
+              berorientasi pada kebutuhan pengguna akhir.</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Proficiency</span><span>80%</span></div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="80"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ORGANISASI ═══════════ -->
+  <section id="organisasi">
+    <div class="container">
+      <p class="section-eyebrow reveal">04 — Organisasi</p>
+      <h2 class="section-title reveal reveal-d1">Keterlibatan Mahasiswa</h2>
+      <div class="section-divider reveal reveal-d2"></div>
+      <div class="org-card reveal reveal-d3">
+        <div class="org-logo-box">💻</div>
+        <div>
+          <div class="org-name">HMPS Ilmu Komputer</div>
+          <div class="org-role-badge">Anggota Aktif</div>
+          <p class="org-desc">
+            Himpunan Mahasiswa Program Studi Ilmu Komputer Universitas Halu Oleo adalah
+            organisasi kemahasiswaan yang menjadi wadah pengembangan kompetensi teknis,
+            soft-skill, dan kontribusi sosial mahasiswa Ilmu Komputer.
+            Aktif berpartisipasi dalam kegiatan diskusi, workshop teknologi, dan pengabdian masyarakat.
+          </p>
+          <div class="org-univ">Universitas Halu Oleo — Kendari</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROYEK ═══════════ -->
+  <section id="proyek">
+    <div class="container">
+      <p class="section-eyebrow reveal">05 — Karya &amp; Proyek</p>
+      <h2 class="section-title reveal reveal-d1">Proyek Unggulan</h2>
+      <div class="section-divider reveal reveal-d2"></div>
+      <div class="project-card reveal reveal-d3">
+        <div>
+          <div class="project-tag-list">
+            <span class="project-tag">Sistem Informasi</span>
+            <span class="project-tag">Web App</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Database</span>
+          </div>
+          <div class="project-title">Sistem Informasi Herbal &amp;<br>Tanaman Obat Indonesia</div>
+          <p class="project-desc">
+            Platform digital berbasis web yang mengintegrasikan data ensiklopedis mengenai
+            tanaman herbal dan obat-obatan tradisional Indonesia. Sistem ini dirancang
+            untuk memudahkan akses masyarakat terhadap informasi ilmiah seputar
+            khasiat, cara pengolahan, dan distribusi tanaman obat nusantara.
+            Dibangun menggunakan teknologi web modern dan Python sebagai backend.
+          </p>
+        </div>
+        <div class="project-emoji" aria-hidden="true">🌿</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">Muzhar Maulana</div>
+    <div class="footer-note">
+      <span>Profil Semantik Web</span> · Ilmu Komputer UHO · F1G123031
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
