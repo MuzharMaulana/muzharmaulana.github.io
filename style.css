@@ -16,7 +16,12 @@
       --font-body:    'Inter', sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100%;
+    }
 
     body {
       font-family: var(--font-body);
@@ -24,6 +29,7 @@
       color: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
+      height: 100%;
     }
 
     ::selection { background: var(--teal); color: var(--navy); }
@@ -121,7 +127,11 @@
 
     /* ─── SECTION SKELETON ─────────────────────────── */
     section {
+      height: 100vh;
       min-height: 100vh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      overflow-y: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -790,4 +800,55 @@
       background: var(--glow);
       color: var(--teal);
       opacity: 1;
+    }
+
+    /* ─── FLOATING SCHEMA BUTTON (FAB) ─────────────── */
+    #schema-fab {
+      position: fixed;
+      bottom: 32px;
+      left: 32px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      padding: 10px 18px 10px 14px;
+      border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(0,201,167,.2);
+      transition: background .25s, box-shadow .25s, transform .25s;
+      animation: fadeUp .8s 1s ease both;
+    }
+
+    #schema-fab:hover {
+      background: var(--teal);
+      color: var(--navy);
+      opacity: 1;
+      box-shadow: 0 8px 32px rgba(0,201,167,.45);
+      transform: translateY(-3px);
+    }
+
+    .fab-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fab-label {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      #schema-fab {
+        bottom: 80px;
+        left: 16px;
+        padding: 10px 14px;
+      }
+      .fab-label { display: none; }
     }
