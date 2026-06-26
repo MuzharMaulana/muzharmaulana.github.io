@@ -556,6 +556,12 @@
     /* ─── ORGANISASI ───────────────────────────────── */
     #organisasi { background: var(--slate); }
 
+    .org-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
     .org-card {
       background: var(--card);
       border: 1px solid var(--border);
